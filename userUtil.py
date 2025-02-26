@@ -5,15 +5,12 @@ import random
 from user import User
 from userservice import UserService
 class UserUtil:
-    @staticmethod
-    def generate_user_id():
-        # Получаем первые две цифры из текущего года
-        year_prefix = str(datetime.today().year)[2:]
 
-        # Генерируем оставшиеся 7 цифр
-        random_digits = ''.join(random.choices(string.digits, k=7))
-        
-        # Формируем итоговый user_id
+
+    @staticmethod
+    def generate_user_id():
+        year_prefix = str(datetime.today().year)[2:]
+        random_digits = ''.join(random.choices(string.digits, k=7)
         return year_prefix + random_digits
 
    
