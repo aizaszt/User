@@ -20,7 +20,7 @@ class TestUser(unittest.TestCase):
 
 class TestUserService(unittest.TestCase):
     def setUp(self):
-        UserService.users = {}  # Очищаем перед тестами
+        UserService.users = {}  
         self.user1 = User(1, "John", "Doe", "john.doe@example.com", "Pass@123", datetime(1998, 6, 10))
         self.user2 = User(2, "Jane", "Smith", "jane.smith@example.com", "Test@456", datetime(1995, 9, 22))
         
